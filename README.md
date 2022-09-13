@@ -15,7 +15,6 @@ Slack 2.0 sends chats in real time and  have text formating features which work 
     7. Blockquote
     8. Code Snippet
     9. File Upload(Not working Properly)
-    10. Mention Someone
 
 ## Tech Stack
 
