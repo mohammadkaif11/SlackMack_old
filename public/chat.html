@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title> Slack-2.0</title>
+</head>
+
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <h1><i class="fas fa-kiwi-bird"></i> Slack-2.0 </h1>
+            <a href="index.html" class="btn" id="leave-btn">Leave Room</a>
+        </header>
+        <main class="chat-main">
+            <div class="chat-sidebar">
+                <h2 id="room-name"></h2>
+                <h3><i class="fas fa-user"></i> Online</h3>
+                <ul id="users">
+                </ul>
+            </div>
+            <div class="chat-messages">
+            </div>
+        </main>
+            <div class="chat-form-container">
+            <div class="formboder">
+                <div class="div_style_text">
+                    <button class="btn-clickforbold" id="btn-clickforbold"
+                        style="font-size: 20px; background-color: black; color: gray;"><i
+                            class="bi bi-type-bold"></i></button>
+                    <button class="btn-clickforitalian" id="btn-clickforitalian"
+                        style="font-size: 20px;  background-color: black; color: gray;"><i
+                            class="bi bi-type-italic"></i></button>
+                    <button class="btn-strikethrough" id="btn-strikethrough"
+                        style="font-size: 15px;  background-color: black; color: gray;"><i
+                            class="fa fa-strikethrough"></i></button> <span>|</span>
+                    <button class="btn-clickforlink" id="btn-clickforlink"
+                        style="font-size: 20px;  background-color: black; color: gray;"><i
+                            class="bi bi-link"></i></button> <span>|</span>
+                    <button class="btn-sendlilist" id="btn-sendlilist"
+                        style="font-size: 20px;  background-color: black; color: gray;"><i
+                            class="bi bi-list-ol"></i></button> <span>|</span>
+                    <button class="btn-sendollist" id="btn-sendollist"
+                        style="font-size: 20px;  background-color: black; color: gray;"><i
+                            class="bi bi-list-ul"></i></button> <span>|</span>
+                    <button class="btn-sendcode" id="btn-sendcode"
+                        style="font-size: 20px;  background-color: black; color: gray;"><i
+                            class="bi bi-code"></i></button>
+                </div>
+                <form id="chat-form">
+                    <textarea class="scroll" id="msg" placeholder="Chat comes here">
+                    </textarea>
+                    <button class="btn-plane" style="background-color: rgb(49, 110, 49); margin-right: 2px;"><i
+                            style="color: white;" class="fas fa-paper-plane"></i></button>
+                </form>
+                <div class="div_style_text">
+                    <input id="sendfile" style="display: none;" type="file" onchange="upload(this.files)" />
+                    <button class="btn-sendfile" id="btn-sendfile"
+                        style="font-size: 25px;  background-color: black; color: gray;"><i
+                            class="bi bi-plus-circle"></i></button><span>|</span>
+                    <button class="btn-clickformention" id="btn-clickformention"
+                        style="font-size: 20px;  background-color: black; color: gray;"><i
+                            class="bi bi-at"></i></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+        integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4=" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
