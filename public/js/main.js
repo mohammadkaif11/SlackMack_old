@@ -378,8 +378,8 @@ function outputMessage(message) {
     if(IsCodeSend){
         var divcontent=document.createElement('div');
         divcontent.innerText=subtemp;
-        divcontent.style.color='black';
-        divcontent.style.backgroundColor='gray';
+        divcontent.style.color='gray';
+        divcontent.style.backgroundColor='black';
         divcontent.style.fontStyle="Consolas";
     }
     if (IsLinkMsg) {
